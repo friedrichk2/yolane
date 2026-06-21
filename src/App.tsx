@@ -44,10 +44,10 @@ interface AppConfig {
 // Preset Default Data (to keep the experience movingly romantic out of the box in fluent French)
 const DEFAULT_CONFIG: AppConfig = {
   queenName: "Ma Reine 🌹",
-  sceneryTitle: "Le Royaume Secret de Ma Reine",
-  scenerySubtitle: "Un refuge intime de contes de fées façonné par l'amour, dédié à la plus précieuse des souveraines.",
-  heroImage: heroImg,
-  letterTitle: "Ma Lettre d'Amour pour Toi",
+  sceneryTitle: "Yolande Ma Reine🌹",
+  scenerySubtitle: "Yolande Jenny de la part de ton BB s'il l'est toujours",
+  heroImage: "/video/yv_1782072834279.jpg",
+  letterTitle: "Ma Lettre  pour Toi ma Reine🌹",
   letterText: `Rebonjour ma Reine.
 
 Je sais que ce jour est lourd. Symbolique, oui, mais surtout tellement douloureux pour toi. Même si tu le caches si bien.
@@ -64,13 +64,20 @@ Tu fais toujours comme si de rien n'était. Mais quand tu m'as raconté tout ça
 
 Je ne te demande pas de me faire confiance dans la seconde. Même si, au fond, c'est ce que j'espère le plus au monde. Pendant longtemps, je ne me jugeais pas assez bien pour mériter de me mettre avec quelqu'un. Mais avec toi, je commence à y croire. Je sais que je ne te ferai pas de mal.
 
-Je suis encore plus déterminer et ma détermination actuel, c'est de réussir à te rendre heureuse parce que j'aime cette façon que tu as de me faire rire comme un idiot ou de me comporter comme un idiot souvent et ta façon de te blottis contre moi souvent ou de t'asseoir sur moi ou ta façon de me faire céder avec ta petite voix douce et qui me rend vraiment encore plus faible. Je te veux toi je suis là pour toi maintenant et je veux toujours l'être, à chaque fois que tu auras besoin de quoi que ce soit sans te mettre la pression. Je suis là.
+Je suis encore plus déterminer et ma détermination actuel, c'est de réussir à te rendre heureuse parce que j'aime cette façon que tu as de me faire rire comme un idiot ou de me comporter comme un idiot souvent et ta façon de te blottis contre moi souvent ou de t'asseoir sur moi ou ta façon de me faire céder avec ta petite voix douce et qui me rend vraiment encore plus faible. Je te veux toi je suis là pour toi maintenant et je veux toujours l'être, à chaque fois que tu auras besoin de quoi que ce soit sans te mettre la pression. 
+
+Je suis là.
+
 je t'embrasse fort ma Reine
 
+ça me ferais plaisir que tu fasses attention aux paroles de cette chanson ma Reine.
+
+Je t'aime
+
 Kenneth Friedrich`,
-  whatsappNumber: "+33600000000",
+  whatsappNumber: "+22898411791",
   whatsappText: "Oui mon Prince, j'ai lu ta merveilleuse lettre et visité notre royaume secret... Mon cœur est profondément ému. Je t'aime ! 🌹👑",
-  musicUrl: "/video/viy.mp4",
+  musicUrl: "/video/Reine.mp3",
   memories: REINE_MEMORIES,
   innerBeauty: [
     {
@@ -576,6 +583,25 @@ export default function App() {
             </svg>
           </div>
         ))}
+      </div>
+
+      {/* PERSISTENT BRANDING LOGO (Top-Left Corner) */}
+      <div className="fixed top-4 left-4 z-40 flex items-center gap-2.5 select-none pointer-events-auto">
+        <div className="glass-panel w-10 h-10 rounded-full flex items-center justify-center text-rose-300 hover:bg-rose-950/60 transition-all border border-white/10 hover:border-rose-500/35 shadow-lg shadow-black/40">
+          <svg 
+            viewBox="0 0 100 100" 
+            className="w-5 h-5 text-rose-200 fill-current hover:rotate-12 transition-transform duration-300"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Elegant outer layout matching the user's uploaded circular S-Curve design */}
+            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2.5" className="opacity-30" />
+            <path d="M50,15 C30.7,15 15,30.7 15,50 C15,69.3 30.7,85 50,85 C69.3,85 85,69.3 85,50 C85,30.7 69.3,15 50,15 Z M50,22 C61.6,22 71.3,29.1 75.3,39.1 C71.3,37.1 66.8,36 62,36 C48.7,36 38,46.7 38,60 C38,64.8 39.1,69.3 41.1,73.3 C29.9,69.3 22,58.6 22,46 C22,32.7 32.7,22 46,22 C47.4,22 48.7,22 50,22 Z M50,78 C48.7,78 47.4,78 46,78 C34.4,78 24.7,70.9 20.7,60.9 C24.7,62.9 29.2,64 34,64 C47.3,64 58,53.3 58,40 C58,35.2 56.9,30.7 54.9,26.7 C66.1,30.7 74,41.4 74,54 C74,67.3 63.3,78 50,78 Z" />
+          </svg>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-xs font-serif italic text-rose-200 tracking-wider">Le Royaume</span>
+          <span className="text-[8px] font-sans font-semibold text-rose-400/70 uppercase tracking-widest leading-none">Secret</span>
+        </div>
       </div>
 
       {/* FLOATING ACTION TOOLBARS (Glassmorphic & Elegant) */}

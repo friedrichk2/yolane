@@ -21,8 +21,12 @@ app.use("/uploads", express.static(uploadsDir));
 
 // Serve static videos/photos inside /video folder created by the user
 const videoDir = path.join(process.cwd(), "video");
+const publicVideoDir = path.join(process.cwd(), "public", "video");
+
 if (fs.existsSync(videoDir)) {
   app.use("/video", express.static(videoDir));
+} else if (fs.existsSync(publicVideoDir)) {
+  app.use("/video", express.static(publicVideoDir));
 }
 
 // Health check API
