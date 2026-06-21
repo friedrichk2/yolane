@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-cursive: "Great Vibes", cursive;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+
+@keyframes shootingStar {
+  0% { transform: translate(0, 0) rotate(-45deg) scale(0); opacity: 0; }
+  1% { opacity: 1; }
+  10% { transform: translate(-400px, 400px) rotate(-45deg) scale(1); opacity: 0; }
+  100% { transform: translate(-400px, 400px) rotate(-45deg) scale(0); opacity: 0; }
+}
+
+@keyframes fallAndSway {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(80px);
+    opacity: 0;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: floatSoft 6s infinite ease-in-out;
+}
+
+.animate-shooting-star {
+  animation: shootingStar 12s infinite linear;
+}
+
+.animate-rose-fall {
+  animation: fallAndSway 12s infinite linear;
+}
+
+/* Scrollbar styles to keep the royal feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(225, 29, 72, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(225, 29, 72, 0.6);
+}
+
+/* Glowing text shadows */
+.text-glow {
+  text-shadow: 0 0 10px rgba(225, 29, 72, 0.3), 0 0 20px rgba(225, 29, 72, 0.1);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 24px rgba(255, 255, 255, 0.15);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-warm {
+  background: rgba(20, 10, 15, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(225, 29, 72, 0.1);
+}
+
