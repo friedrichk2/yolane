@@ -23,16 +23,11 @@
       "dest": "server.ts"
     },
     {
-      "src": "/video/(.*)",
-      "dest": "/video/$1"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 }

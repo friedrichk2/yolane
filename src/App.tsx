@@ -46,7 +46,7 @@ const DEFAULT_CONFIG: AppConfig = {
   queenName: "Ma Reine 🌹",
   sceneryTitle: "Yolande Ma Reine🌹",
   scenerySubtitle: "Yolande Jenny de la part de ton BB s'il l'est toujours",
-  heroImage: "/video/yv_1782072834279.jpg",
+  heroImage: "/video/yv.jpg",
   letterTitle: "Ma Lettre  pour Toi ma Reine🌹",
   letterText: `Rebonjour ma Reine.
 
@@ -139,6 +139,11 @@ export default function App() {
         if (!parsed.letterText || !parsed.letterText.startsWith("Rebonjour ma Reine.") || parsed.letterText.includes("with toi") || parsed.letterText.includes("bizarreement")) {
           parsed.letterText = DEFAULT_CONFIG.letterText;
           localStorage.setItem('royaume_secret_config', JSON.stringify({ ...parsed, letterText: DEFAULT_CONFIG.letterText }));
+        }
+        // Transparent transition to the requested yv.jpg for the hero image if it maps to old or missing file
+        if (!parsed.heroImage || parsed.heroImage === "/video/yv_1782072834279.jpg" || parsed.heroImage.includes("my_queen_perfect")) {
+          parsed.heroImage = "/video/yv.jpg";
+          localStorage.setItem('royaume_secret_config', JSON.stringify({ ...parsed, heroImage: "/video/yv.jpg" }));
         }
         return { ...DEFAULT_CONFIG, ...parsed, memories: mergeMemoriesWithDefaults(parsed.memories), letterText: DEFAULT_CONFIG.letterText };
       } catch (e) {
